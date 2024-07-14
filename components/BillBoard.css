@@ -1,0 +1,13 @@
+.yt-embedder{
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    pointer-events: none;
+
+
+}
+
+.yt-embedder iframe{
+    width: 300%;
+    height: 100%;
+    margin-left: -100%;
+}
