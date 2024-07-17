@@ -13,7 +13,7 @@ const ChatPage = ()=>{
     const [sessionId,setSessionId] = useState(null);
 
     const getResponse = async(query,sessionId)=>{
-        const res = await axios.post("http://localhost:3000/api/chatbot",{
+        const res = await axios.post(`${process.env.NEXT_SITE_URL}/api/chatbot`,{
             query: query,
             userSessionId:sessionId
         })
