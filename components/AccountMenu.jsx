@@ -4,12 +4,12 @@ import Image from "next/image"
 import { useSession } from "@/src/app/contexts/SessionContext";
 
 export default function AccountMenu({visible}){
+    const session = useSession();
 
     if(!visible){
         return null;
     }
-    
-    const session = useSession();
+
     const userName = session.user.name;
 
     return (

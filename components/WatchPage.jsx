@@ -1,13 +1,12 @@
 "use client"
-import { useRouter } from 'next/navigation';
-import { FaRegHeart } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa6";
-import { FaHeart } from "react-icons/fa";
-import Footer from './Footer';
-import MovieList from './MovieList';
-import { useEffect, useState } from 'react';
 import { addToFavourites, deleteFavourites, fetchFavourites } from '@/lib/fetchFavourites';
 import { useSession } from "@/src/app/contexts/SessionContext";
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa6";
+import Footer from './Footer';
+import MovieList from './MovieList';
 
 
 const WatchPage = ({movieTitle,queriedTrailer,Description,recommendations,ratings,movieId})=>{
@@ -26,7 +25,7 @@ const WatchPage = ({movieTitle,queriedTrailer,Description,recommendations,rating
         };
 
         fetchFavouritesData();
-    }, []);
+    }, [movieId,session]);
 
     const handleFav = ()=>{
         try{

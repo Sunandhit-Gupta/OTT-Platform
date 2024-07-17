@@ -11,7 +11,7 @@ export default async function auth(){
   if(session){
      redirect("/pages/profile");
   }
-
+  
   return <AuthForm/>
 
 }

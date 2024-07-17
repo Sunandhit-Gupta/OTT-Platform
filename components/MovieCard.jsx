@@ -18,6 +18,8 @@ const MovieCard = ({data})=>{
         encodedMovieTrailerEmbedUrl = encodeURIComponent(movieTrailerEmbedUrl);
     }
     const movieTitle = data.title;
+    let poster_url = data.poster_url;
+    if(!poster_url) poster_url = data.backdrop_url;
 
     return (
         <div className="group bg-zinc-900 col-span relative h-[12vw] lg:h-[12vw] md:h-[30vw]">
@@ -31,7 +33,7 @@ const MovieCard = ({data})=>{
             w-full
             lg:h-[12vw]
             md:h-[30vw]"
-             src={data.poster_url} width={100} height={100} alt={data.title}/>
+             src={poster_url} width={100} height={100} alt={data.title}/>
 
              <div className="opacity-0
              absolute
@@ -57,7 +59,7 @@ const MovieCard = ({data})=>{
                 rounded-t-md
                 w-full
                 h-[12vw]"
-                src={data.poster_url} width={100} height={100} alt={data.title}/>
+                src={poster_url} width={100} height={100} alt={data.title}/>
                 <div
                 className="z-10 bg-zinc-800
                 p-2
