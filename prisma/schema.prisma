@@ -23,7 +23,7 @@ model User{
   hashedPassword String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  favouriteIds String[] @db.ObjectId
+  favouriteIds String[] @default([])
   sessions Session[]
   accounts Account[]
 }
@@ -71,7 +71,7 @@ model VerificationToken{
 model Movie {
   def_id String  @id @default(auto()) @map("_id") @db.ObjectId
   id               String @map("id") @unique
-  budget                 String
+  budget           String
   genre            Json
   original_language String    @map("original_language")
   title            String
@@ -84,5 +84,5 @@ model Movie {
   poster_url        String    @map("poster_url")
   backdrop_url      String    @map("backdrop_url")
   trailer_urls      String[]  @map("trailer_urls")
-  last_update       DateTime  @map("last_update")
+  last_update       DateTime  @map("last_update") @default(now())
 }

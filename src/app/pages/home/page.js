@@ -30,12 +30,13 @@ export default async function HomePage() {
 
 
   const data = await fetchRandomMovie();
+
   let trailerEmbedUrl = '';
   let posterUrl = '';
-  let movie_title = data[0].title;
-  let movie_overview = data[0].overview;
-  let movie_id =data[0].id;
-  const movieRatings = data[0].vote_average;
+  let movie_title = data? data[0].title : "";
+  let movie_overview = data? data[0].overview : "";
+  let movie_id = data? data[0].id : "";
+  const movieRatings = data? data[0].vote_average: "";
   if (data && data.length > 0 && data[0].trailer_urls && data[0].trailer_urls.length > 0) {
   let youtubeUrl = data[0].trailer_urls[0];
   posterUrl = data[0].poster_url;
@@ -44,7 +45,6 @@ export default async function HomePage() {
   } else {
     console.error('Invalid data structure:', data);
     throw new Error("Invalid Data");
-
   }
 
 const no_of_recommendations = 10;
@@ -58,7 +58,7 @@ const documentryMovies = await fetchGenre('Documentary',10,10);
   return (<>
     <div className="relative flex flex-col gap-0  justify-center no-scrollbar">
       <NavBar />
-      
+
       <div className="w-full h-100 relative">
       <BillBoard movieOverview = {movie_overview} movieTitle = {movie_title} trailerUrl={trailerEmbedUrl} posterUrl={posterUrl} movieId={movie_id} movieRatings={movieRatings}/>
       </div>

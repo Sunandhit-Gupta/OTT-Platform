@@ -12,7 +12,8 @@ export default async function watch({params} ){
         recommendations = await fetchRecommend(movieId,no_of_recommendations);
     }
     catch(err){
-         return {error: err } ;
+        console.log(err);
+        recommendations = [];
     }
 
     const rec_movieData = await fetchMovieData(recommendations);
@@ -23,9 +24,10 @@ export default async function watch({params} ){
     const queriedTrailer = trailerUrl+"?&rel=0&modestbranding=1&autoplay=1&loop=1&mute=1&color=white&playsinline=1&enablejsapi=1&t=10s";
 
     console.log("urlsGot: ", trailerUrl);
+    console.log("params",params.movieData);
     return (
         <div className="">
-        <WatchPage  movieTitle={movieTitle} queriedTrailer={queriedTrailer} recommendations={rec_movieData} Description={Description} ratings={movie_ratings}/>
+        <WatchPage  movieTitle={movieTitle} queriedTrailer={queriedTrailer} recommendations={rec_movieData} Description={Description} ratings={movie_ratings} movieId={movieId}/>
         </div>
     )
 }

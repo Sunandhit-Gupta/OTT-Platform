@@ -3,7 +3,6 @@ import options from "../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import { SessionProvider } from "@/src/app/contexts/SessionContext";
 
-
 export default async function ProtectedLayout({ children }) {
   const session = await getServerSession(options);
 
