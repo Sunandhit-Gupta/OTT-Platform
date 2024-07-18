@@ -17,6 +17,7 @@ const WatchPage = ({movieTitle,queriedTrailer,Description,recommendations,rating
         const fetchFavouritesData = async () => {
             try {
                 const res = await fetchFavourites(session);
+                console.log("result",res);
                 const index = res.findIndex(elem => elem === movieId);
                 setFavourite(index !== -1);
             } catch (error) {
@@ -25,7 +26,7 @@ const WatchPage = ({movieTitle,queriedTrailer,Description,recommendations,rating
         };
 
         fetchFavouritesData();
-    }, [movieId,session]);
+    }, []);
 
     const handleFav = ()=>{
         try{
