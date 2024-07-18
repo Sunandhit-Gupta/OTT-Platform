@@ -6,11 +6,12 @@ const PlayButton = ({trailerUrl,movieTitle,overview,movieId, movieRatings})=>{
     const router = useRouter();
     const trailer_url_without_query = trailerUrl.substring(0,41);
     const encodedURL = encodeURIComponent(trailer_url_without_query);
+    const encodedTrailerKey = encodeURIComponent(trailer_url_without_query.split("embed/")[1]);
     const encodeOverview = encodeURIComponent(overview);
     const encodeRatings = encodeURIComponent(movieRatings);
     return (
         <button
-        onClick={()=>router.push(`/pages/watch/${movieTitle}/${encodedURL}/${encodeOverview}/${movieId}/${encodeRatings}`)}
+        onClick={()=>router.push(`/pages/watch/${movieTitle}/${encodedTrailerKey}/${encodeOverview}/${movieId}/${encodeRatings}`)}
         className="bg-white
         rounded-md
         py-1 md:py-2
