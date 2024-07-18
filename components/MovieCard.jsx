@@ -13,12 +13,14 @@ const MovieCard = ({data})=>{
     const encodeRatings = encodeURIComponent(movie_ratings);
     let movieTrailerEmbedUrl = "";
     let encodedMovieTrailerEmbedUrl = "";
+    let movieTrailerKey ="noKey";
     if(movieTrailerUrl){
         movieTrailerEmbedUrl  = "https://www.youtube.com/embed/" + movieTrailerUrl.split("watch?v=")[1];
         encodedMovieTrailerEmbedUrl = encodeURIComponent(movieTrailerEmbedUrl);
+        movieTrailerKey = movieTrailerUrl.split("watch?v=")[1];
     }
-    const movieTrailerKey = movieTrailerUrl.split("watch?v=")[1];
     const encodedMovieTrailerKey = encodeURIComponent(movieTrailerKey);
+
     const movieTitle = data.title;
     let poster_url = data.poster_url;
     if(!poster_url) poster_url = data.backdrop_url;
