@@ -43,7 +43,7 @@ export default  function AuthForm() {
   const register = useCallback(async()=>{
 
     try{
-      await axios.post(`${process.env.NEXT_PUBLIC_NEXT_SITE_URL}/api/auth/register`,{
+      await axios.post(`/api/auth/register`,{
         email,
         name,
         password,
