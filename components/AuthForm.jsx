@@ -61,7 +61,7 @@ export default  function AuthForm() {
     <div className='h-100 min-h-full w-full bg-[url(/images/background.jpg)] bg-cover '>
     <div className='bg-black h-full min-h-full lg:bg-opacity-50 min-h-full h-full'>
       <nav>
-      <Image src= '/images/Netflix_Logo.png' width={100} height={100} alt='Logo' px-2 />
+      <Image  unoptimized src= '/images/Netflix_Logo.png' width={100} height={100} alt='Logo' px-2 />
       </nav>
       <div className='flex flex-col justify-center'>
         <div className='bg-black bg-opacity-70 px-16 py-16  self-center '>

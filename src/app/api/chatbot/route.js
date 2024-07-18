@@ -14,7 +14,7 @@ async function createChatSession(apiKey, externalUserId) {
         'apikey': apiKey
       },
       body: JSON.stringify({
-        pluginIds: ['plugin-1719929505'],
+        pluginIds: ['plugin-1719929505','plugin-1721309142'],
         externalUserId: externalUserId
       })
     });
@@ -33,7 +33,7 @@ async function createChatSession(apiKey, externalUserId) {
       body: JSON.stringify({
         endpointId: 'predefined-openai-gpt4o',
         query: query,
-        pluginIds: ['plugin-1719929505'],
+        pluginIds: ['plugin-1719929505','plugin-1721309142'],
         responseMode: 'sync'
       })
     });
@@ -56,7 +56,7 @@ const externalUserId = 'Phase';
         }
         const response = await submitQuery(apiKey, sessionId, query);
         const message = response.data.answer;
-        
+
         const data = {message: message, sessionId: sessionId};
         return NextResponse.json(data,{status:200});
       } catch (error) {

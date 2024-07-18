@@ -28,7 +28,7 @@ export default  function ProfilePage(){
                 <div onClick={navigateHome}>
                     <div className="group flex-col w-44 mx-auto flex items-center justify-center">
                         <div className="w-20 h-20 rounded-md flex items-center justify-center border-2 border-transparent group-hover:cursor-pointer group-hover:border-white overflow-hidden">
-                            <Image src={"/images/avatar.png"} alt="avatar" width={180} height={100}/>
+                            <Image  unoptimized src={"/images/avatar.png"} alt="avatar" width={180} height={100}/>
                         </div>
                         <div className="mt-4 text-gray-400 text-2xl text-center group-hover:text-white">
                             {userName}

@@ -89,7 +89,7 @@ export default function NavBar(){
             }
             `}>
 
-                <Image className="h-9 lg:h-9" src={"/images/Netflix_Logo.png"} width={100} height={200} alt="Logo"/>
+                <Image unoptimized className="h-9 lg:h-9" src={"/images/Netflix_Logo.png"} width={100} height={200} alt="Logo"/>
 
                 <div className=" flex-row ml-8 gap-7 hidden lg:flex">
                    <Link href= "/pages/home"> <NavBarItem label={"Home"}/> </Link>
@@ -118,7 +118,7 @@ export default function NavBar(){
                     </div> */}
                     <div onClick={toggleAccountMenu} className="flex flex-row items-center gap-2 cursor-pointer relative">
                         <div className="w-7 h-7 lg:w-10 lg:h-10 rounded-md overflow-hidden ">
-                            <Image src={"/images/avatar.png"} width={100} height={100} alt="avatar"/>
+                            <Image unoptimized src={"/images/avatar.png"} width={100} height={100} alt="avatar"/>
                         </div>
                         <BsChevronDown  className= {`text-white transition ${showAccountMenu? 'rotate-180':'rotate-0'}`}/>
                         <AccountMenu visible={showAccountMenu} />

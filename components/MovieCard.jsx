@@ -28,7 +28,7 @@ const MovieCard = ({data})=>{
     return (
         <div className="group bg-zinc-900 col-span relative h-[12vw] lg:h-[12vw] md:h-[30vw]">
 
-            <Image className="cursor-pointer rounded-md object-cover transition
+            <Image unoptimized className="cursor-pointer rounded-md object-cover transition
             duration
             shadow-xl
             grounp-hover:opacity-90
@@ -55,7 +55,7 @@ const MovieCard = ({data})=>{
              group-hover:translate-x-[1vw]
              group-hover:opacity-100">
 
-                <Image className="cursor-pointer
+                <Image unoptimized className="cursor-pointer
                 object-cover
                 transition
                 duration
