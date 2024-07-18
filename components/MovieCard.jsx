@@ -17,6 +17,8 @@ const MovieCard = ({data})=>{
         movieTrailerEmbedUrl  = "https://www.youtube.com/embed/" + movieTrailerUrl.split("watch?v=")[1];
         encodedMovieTrailerEmbedUrl = encodeURIComponent(movieTrailerEmbedUrl);
     }
+    const movieTrailerKey = movieTrailerUrl.split("watch?v=")[1];
+    const encodedMovieTrailerKey = encodeURIComponent(movieTrailerKey);
     const movieTitle = data.title;
     let poster_url = data.poster_url;
     if(!poster_url) poster_url = data.backdrop_url;
@@ -82,7 +84,7 @@ const MovieCard = ({data})=>{
                         transition
                         items-center
                         hover:bg-neutral-300"
-                        onClick={()=>router.push(`/pages/watch/${movieTitle}/${encodedMovieTrailerEmbedUrl}/${overview}/${movieId}/${encodeRatings}`)}
+                        onClick={()=>router.push(`/pages/watch/${movieTitle}/${encodedMovieTrailerKey}/${overview}/${movieId}/${encodeRatings}`)}
                         >
                             <BsFillPlayFill size={30}/>
                         </div>
