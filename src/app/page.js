@@ -15,7 +15,7 @@ import Image from "next/image";
     <div className="bg-gradient-to-b from-black from-30% via-transparent via-50% to-black to-80% h-full ">
       <div className="bg-black opacity-80 h-full">
       <div className=" h-30 px-5 py-10">
-        <Image unoptimized className="h-20 w-40 " src={"/images/Netflix_Logo.png"} width={100} height={100} alt="Logo"/>
+        <Image unoptimized className="h-20 w-40 " src={"/images/Netflix_Logo.png"} width={100} height={100} alt="Logo" />
       </div>
       <div className="flex items-center justify-center h-100 flex-col gap-5 lg:gap-2">
         <div className="gap-y-6 flex flex-col justify-center items-center px-2">

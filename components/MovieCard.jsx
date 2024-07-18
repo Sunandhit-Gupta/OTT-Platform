@@ -31,13 +31,13 @@ const MovieCard = ({data})=>{
             <Image unoptimized className="cursor-pointer rounded-md object-cover transition
             duration
             shadow-xl
-            grounp-hover:opacity-90
+            group-hover:opacity-90
             sm:group-hover:opacity-0
             delay-100
             w-full
             lg:h-[12vw]
             md:h-[30vw]"
-             src={poster_url} width={100} height={100} alt={data.title}/>
+             src={poster_url} width={100} height={100} alt={data.title}  onClick={()=>router.push(`/pages/watch/${movieTitle}/${encodedMovieTrailerKey}/${overview}/${movieId}/${encodeRatings}`)}/>
 
              <div className="opacity-0
              absolute
