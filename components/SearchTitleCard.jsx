@@ -10,14 +10,17 @@ const SearchTitleCard = ({data})=>{
     const encodeRatings = encodeURIComponent(movie_ratings);
     let movieTrailerEmbedUrl = "";
     let encodedMovieTrailerEmbedUrl = "";
+    let movieTrailerKey = "noKey";
     if(movieTrailerUrl){
         movieTrailerEmbedUrl  = "https://www.youtube.com/embed/" + movieTrailerUrl.split("watch?v=")[1];
         encodedMovieTrailerEmbedUrl = encodeURIComponent(movieTrailerEmbedUrl);
+        movieTrailerKey = movieTrailerUrl.split("watch?v=")[1];
     }
+    const encodedMovieKey = encodeURIComponent(movieTrailerKey);
     const movieTitle = data.title;
 
     const handleClick = ()=>{
-        return router.push(`/pages/watch/${movieTitle}/${encodedMovieTrailerEmbedUrl}/${overview}/${movieId}/${encodeRatings}`);
+        return router.push(`/pages/watch/${movieTitle}/${encodedMovieKey}/${overview}/${movieId}/${encodeRatings}`);
     }
 
     if(!data) return null;
