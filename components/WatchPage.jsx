@@ -26,7 +26,7 @@ const WatchPage = ({movieTitle,queriedTrailer,Description,recommendations,rating
         };
 
         fetchFavouritesData();
-    }, []);
+    }, [movieId,session]);
 
     const handleFav = ()=>{
         try{
