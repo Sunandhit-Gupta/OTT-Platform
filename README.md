@@ -12,11 +12,10 @@ This project is a web-based OTT (Over-The-Top) platform where users can watch mo
 - **Search Functionality**: Quickly find movies by title, genre, or other attributes.
 
 ## Tech Stack
-- **Frontend**: HTML, CSS, JavaScript, Tailwind CSS, React.js
-- **Backend**: Node.js, Express.js
 - **Database**: MongoDB
-- **APIs**: TMDb API for fetching movie data, trailers, and more
+- **APIs**: Created Recommendation System Api
 - **Framework**: Next.js for server-side rendering and static site generation
+- **Python**: For Creating Recommendation System
 
 ## Installation
 
