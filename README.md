@@ -15,8 +15,6 @@ This project is a web-based OTT (Over-The-Top) platform where users can watch mo
 - **Database**: MongoDB
 - **APIs**: Created Recommendation System Api
 - **Framework**: Next.js for server-side rendering and static site generation
-- **Python**: For Creating Recommendation System
-
 ## Installation
 
 Clone the repository:
